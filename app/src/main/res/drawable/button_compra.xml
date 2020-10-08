@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:sandroid="http://schemas.android.com/apk/res/android">
+    sandroid:shape="rectangle"
+    >
+    <corners
+        sandroid:radius="5dp"
+        />
+    <solid
+        sandroid:color="@android:color/white"
+        />
+    <stroke
+        sandroid:width="2dp"
+        sandroid:color="@android:color/white"/>
+
+
+
+
+</shape>
+

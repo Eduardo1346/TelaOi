@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+   <include
+       android:id="@+id/include"
+       layout="@layout/toollbar"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.0"
+       app:layout_constraintStart_toStartOf="parent"
+       tools:layout_editor_absoluteY="-4dp" />
+
+   <com.ogaclejapan.smarttablayout.SmartTabLayout
+       android:id="@+id/viewPagerTab"
+       android:layout_width="match_parent"
+
+       android:layout_height="48dp"
+       android:layout_marginTop="56dp"
+       android:background="@color/colorPrimary"
+       app:layout_constraintTop_toTopOf="@+id/include"
+       app:stl_clickable="true"
+       app:stl_defaultTabTextAllCaps="true"
+       app:stl_defaultTabTextColor="#FFF"
+       app:stl_defaultTabTextHorizontalPadding="16dp"
+       app:stl_defaultTabTextMinWidth="0dp"
+       app:stl_defaultTabTextSize="11sp"
+       app:stl_distributeEvenly="true"
+       app:stl_dividerColor="@android:color/transparent"
+       app:stl_dividerThickness="1dp"
+       app:stl_drawDecorationAfterTab="false"
+       app:stl_indicatorAlwaysInCenter="false"
+       app:stl_indicatorColor="#FFF"
+       app:stl_indicatorCornerRadius="2dp"
+       app:stl_indicatorGravity="bottom"
+       app:stl_indicatorInFront="false"
+       app:stl_indicatorInterpolation="smart"
+       app:stl_indicatorThickness="4dp"
+       app:stl_indicatorWidth="auto"
+       app:stl_indicatorWithoutPadding="false"
+       app:stl_overlineColor="#4D000000"
+       app:stl_overlineThickness="0dp"
+       app:stl_titleOffset="24dp"
+       app:stl_underlineColor="#4D000000"
+       app:stl_underlineThickness="1dp"
+       tools:ignore="MissingConstraints"
+       tools:layout_editor_absoluteX="-16dp" />
+
+   <androidx.viewpager.widget.ViewPager
+       android:id="@+id/viewPager"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/viewPagerTab"
+       app:layout_constraintTop_toBottomOf="parent"
+       tools:layout_editor_absoluteX="-30dp" >
+
+   </androidx.viewpager.widget.ViewPager>
+
+
+   <TextView
+       android:id="@+id/textSaldo"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="36dp"
+       android:text="SALDO DE CRÉDITOS"
+       android:textColor="@color/colorPrimaryDark"
+       android:textSize="23sp"
+       android:textStyle="bold"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.124"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/viewPagerTab" />
+
+   <TextView
+       android:id="@+id/textRs"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="136dp"
+       android:text="R$"
+       android:textColor="@color/colorLetras"
+       android:textSize="30sp"
+       android:textStyle="bold"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.041"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/viewPagerTab" />
+
+   <TextView
+       android:id="@+id/textNum"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="112dp"
+       android:text="1,48"
+       android:textColor="@color/colorLetras"
+       android:textSize="57sp"
+       android:textStyle="bold"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.287"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/viewPagerTab" />
+
+   <TextView
+       android:id="@+id/textView5"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="240dp"
+       android:text="Válidos até "
+       android:textSize="16sp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.942"
+       app:layout_constraintStart_toEndOf="@+id/textRs"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <TextView
+       android:id="@+id/textView6"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="260dp"
+       android:text="05/10/2020"
+       android:textSize="16sp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.95"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <Button
+       android:id="@+id/button3"
+       android:layout_width="363dp"
+       android:layout_height="57dp"
+       android:layout_marginTop="344dp"
+       android:background="@drawable/button_pink"
+       android:elevation="20dp"
+       android:text="FAZER RECARGA"
+       android:textColor="@android:color/white"
+       android:textSize="15sp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <Button
+       android:layout_width="174dp"
+       android:layout_height="71dp"
+       android:layout_marginTop="428dp"
+       android:background="@drawable/button_troca"
+       android:drawableEnd="@drawable/ic_troca3"
+       android:elevation="30dp"
+       android:text="TROCAR VOZ E INTERNET         "
+       android:textColor="@color/colorLetras"
+       android:textSize="15sp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.067"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="@+id/include" />
+
+   <Button
+       android:layout_width="174dp"
+       android:layout_height="71dp"
+       android:layout_marginTop="428dp"
+       android:background="@drawable/button_compra"
+       android:drawableEnd="@drawable/ic_bolsa"
+       android:elevation="30dp"
+       android:text="  COMPRAR PACOTES"
+       android:textColor="@color/colorLetras"
+       android:textSize="15sp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.932"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <Button
+       android:id="@+id/button4"
+       android:drawableRight="@drawable/ic_mude"
+
+       android:layout_width="363dp"
+       android:layout_height="57dp"
+       android:layout_marginTop="528dp"
+       android:background="@drawable/button_compra"
+       android:elevation="30dp"
+       android:text="MUDE PARA CONTROLE"
+       android:textColor="@color/colorLetras"
+       android:textSize="15dp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.437"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <TextView
+       android:id="@+id/textView7"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="608dp"
+       android:text="Entenda sua oferta"
+       android:textColor="@color/colorLetras"
+       android:textSize="15sp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.461"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <TextView
+       android:id="@+id/textView8"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="636dp"
+       android:textSize="14sp"
+       android:text="Informações atualizadas: Agora mesmo"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.461"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <View
+       android:layout_width="369dp"
+       android:layout_height="1dp"
+       android:background="@color/cardview_dark_background"
+       android:layout_marginTop="309dp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="@+id/include" />
+
+   <View
+       android:layout_width="369dp"
+       android:layout_height="1dp"
+       android:background="@color/cardview_dark_background"
+       android:layout_marginTop="188dp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.727"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="@+id/include" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
